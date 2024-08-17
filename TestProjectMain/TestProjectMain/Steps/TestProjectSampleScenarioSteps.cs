@@ -39,13 +39,13 @@ namespace TestProjectMain
         [Then(@"I am directed to the site search page")]
         public void ThenIAmDirectedToTheSiteSearchPage()
         {
-            Assert.IsTrue(googlePage.IsGoogleSearchFormDisplayed(), "Failure: Google page not found.");
+            Assert.That(googlePage.IsGoogleSearchFormDisplayed().Equals(true), "Failure: Google page not found.");
         }
 
         [Then(@"I am directed to the site search results page")]
         public void ThenIAmDirectedToTheSiteSearchResultsPage()
         {
-            Assert.IsTrue(_webDriver.GetCurrentUrl().Contains("https://www.google.com/search?"), "Failure: search failed");
+            Assert.That(_webDriver.GetCurrentUrl().Contains("https://www.google.com/search?").Equals(true), "Failure: search failed");
         }
     }
 }

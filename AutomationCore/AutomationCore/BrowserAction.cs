@@ -1,5 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Edge;
+using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
@@ -19,6 +21,16 @@ namespace AutomationCore.UI
         }
 
         public BrowserAction(ChromeOptions options) : base(options)
+        {
+            _webDriver = GetDriver();
+        }
+
+        public BrowserAction(EdgeOptions options) : base(options)
+        {
+            _webDriver = GetDriver();
+        }
+
+        public BrowserAction(FirefoxOptions options) : base(options)
         {
             _webDriver = GetDriver();
         }

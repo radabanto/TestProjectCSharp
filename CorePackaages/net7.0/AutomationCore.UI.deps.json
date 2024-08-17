@@ -1,0 +1,116 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "AutomationCore.UI/1.0.0": {
+        "dependencies": {
+          "NUnit": "4.1.0",
+          "NUnit.ConsoleRunner": "3.18.1",
+          "NUnit3TestAdapter": "4.6.0",
+          "Selenium.Support": "4.23.0",
+          "Selenium.WebDriver": "4.23.0"
+        },
+        "runtime": {
+          "AutomationCore.UI.dll": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.25517"
+          }
+        }
+      },
+      "NUnit/4.1.0": {
+        "runtime": {
+          "lib/net6.0/nunit.framework.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.0.1.0"
+          },
+          "lib/net6.0/nunit.framework.legacy.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.0.1.0"
+          }
+        }
+      },
+      "NUnit.ConsoleRunner/3.18.1": {},
+      "NUnit3TestAdapter/4.6.0": {},
+      "Selenium.Support/4.23.0": {
+        "dependencies": {
+          "Selenium.WebDriver": "4.23.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/WebDriver.Support.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
+      "Selenium.WebDriver/4.23.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/WebDriver.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AutomationCore.UI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Newtonsoft.Json/13.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "path": "newtonsoft.json/13.0.1",
+      "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
+    },
+    "NUnit/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MT/DpAhjtiytzhTgTqIhBuWx4y26PKfDepYUHUM+5uv4TsryHC2jwFo5e6NhWkApCm/G6kZ80dRjdJFuAxq3rg==",
+      "path": "nunit/4.1.0",
+      "hashPath": "nunit.4.1.0.nupkg.sha512"
+    },
+    "NUnit.ConsoleRunner/3.18.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-X09q0K9vU/vfURS0WrVsHG3E94z/gmOSTEZpS8D2IsI5qpBkykxXvoAVFymZ7cc1zMYTA8OfqrkAbkIbvFwEfg==",
+      "path": "nunit.consolerunner/3.18.1",
+      "hashPath": "nunit.consolerunner.3.18.1.nupkg.sha512"
+    },
+    "NUnit3TestAdapter/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R7e1+a4vuV/YS+ItfL7f//rG+JBvVeVLX4mHzFEZo4W1qEKl8Zz27AqvQSAqo+BtIzUCo4aAJMYa56VXS4hudw==",
+      "path": "nunit3testadapter/4.6.0",
+      "hashPath": "nunit3testadapter.4.6.0.nupkg.sha512"
+    },
+    "Selenium.Support/4.23.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ykT3saViorD54A6Eizw6CnNp8SuuIx4E01QhtEnZVrFvgH6P6mSgpCgfDlCX2RNwbGnrpkeoG5eV1dOGmzP12w==",
+      "path": "selenium.support/4.23.0",
+      "hashPath": "selenium.support.4.23.0.nupkg.sha512"
+    },
+    "Selenium.WebDriver/4.23.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jQxNGGuWeSw/+xeZVv+0TL6pVnKeLsBYlxvADY7iGyq1yjgtUFNxGK01t0Op6+FMVdFLcMysL4Z0VdTvzFn0eA==",
+      "path": "selenium.webdriver/4.23.0",
+      "hashPath": "selenium.webdriver.4.23.0.nupkg.sha512"
+    }
+  }
+}

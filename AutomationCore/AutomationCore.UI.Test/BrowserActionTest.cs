@@ -13,7 +13,7 @@ namespace AutomationCore.UI.Test
         }
 
         [Test]
-        public void BrowserActionSessionTest()
+        public void BrowserActionChromeDefaultSessionTest()
         {
             WebDriver.GoToUrl("https://www.google.com");
             WebDriver.WaitForPageToLoad();

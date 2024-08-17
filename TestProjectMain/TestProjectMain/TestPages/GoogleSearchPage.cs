@@ -8,11 +8,11 @@ namespace TestProjectMain.TestPages
         #region elements
         public IWebElement GoogleSearchForm => _driver.FindElement(By.XPath("/html/body/div[1]/div[3]/form"));
 
-        public IWebElement GoogleSearchField => _driver.FindElement(By.XPath("//input[contains(@title, 'Search')]"));
+        public IWebElement GoogleSearchField => _driver.FindElement(By.XPath("//textarea[contains(@title, 'Search')]"));
 
-        public IWebElement GoogleEnterSearchButton => _driver.FindElement(By.XPath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[2]/div[2]/div[5]/center/input[1]"));
+        public IWebElement GoogleEnterSearchButton => _driver.FindElement(By.XPath("//input[contains(@aria-label, 'Google Search')]"));
 
-        public IWebElement GooglePrimaryEnterSearchButton => _driver.FindElement(By.XPath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]"));
+        public IWebElement GooglePrimaryEnterSearchButton => _driver.FindElement(By.XPath("//input[contains(@aria-label, 'Google Search')]"));
 
         #endregion
 
