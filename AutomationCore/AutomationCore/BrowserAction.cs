@@ -50,7 +50,7 @@ namespace AutomationCore.UI
             new BrowserWaits(this).WaitForPageToLoad();
         }
 
-        public bool WaitForElement(IWebElement element, double timeout)
+        public bool IsElementDisplayed(IWebElement element, double timeout)
         {
             var name = GetElementName(element);
             Exception lastException = null;
@@ -172,16 +172,9 @@ namespace AutomationCore.UI
             return type;
         }
 
-        public bool IsElementDisplayed(IWebElement element)
+        public IWebElement GetElementBy(By by)
         {
-            try
-            {
-                return element.Displayed;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            return this._webDriver.FindElement(by);
         }
 
         public void GoToUrl(string url)
