@@ -6,6 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\TestProjectSampleScenario - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\TestProjectSampleScenario - Edge - Copy.feature.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
     <PackageReference Include="NUnit" Version="4.1.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
@@ -21,8 +26,28 @@
 
   <ItemGroup>
     <Reference Include="AutomationCore.UI">
-      <HintPath>..\..\CorePackaages\net7.0\AutomationCore.UI.dll</HintPath>
+      <HintPath>..\..\AutomationCore\AutomationCore\bin\Release\net7.0\AutomationCore.UI.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Features\TestProjectSampleScenario - Firefox.feature.cs">
+      <DependentUpon>TestProjectSampleScenario - Firefox.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\TestProjectSampleScenario - Edge.feature.cs">
+      <DependentUpon>TestProjectSampleScenario - Edge.feature</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowFeatureFiles Update="Features\TestProjectSampleScenario - Firefox.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\TestProjectSampleScenario - Edge.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
   </ItemGroup>
 
 </Project>

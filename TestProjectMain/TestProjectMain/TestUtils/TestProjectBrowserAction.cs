@@ -1,6 +1,8 @@
 ﻿using AutomationCore.UI;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Edge;
+using OpenQA.Selenium.Firefox;
 using System;
 
 namespace TestProjectMain.TestUtils
@@ -18,6 +20,18 @@ namespace TestProjectMain.TestUtils
         {
             _driver = GetDriver();
         }
+
+        public TestProjectBrowserAction(EdgeOptions options) : base(options)
+        {
+            _driver = GetDriver();
+        }
+
+        public TestProjectBrowserAction(FirefoxOptions options) : base(options)
+        {
+            _driver = GetDriver();
+        }
+
+
 
         public void step()
         {
