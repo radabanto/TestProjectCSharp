@@ -22,29 +22,28 @@ namespace TestProjectMain.TestPages
 
         public bool IsGoogleSearchFormDisplayed()
         {
-            return _webDriver.IsElementDisplayed(GoogleSearchForm);
+            return _webDriver.IsElementDisplayed(GoogleSearchForm, 3);
         }
 
         public bool IsGoogleSearchFieldPresent()
         {
-            return _webDriver.IsElementDisplayed(GoogleSearchField);
+            return _webDriver.IsElementDisplayed(GoogleSearchField, 3);
         }
 
         public void InputSearchOnGoogleSearchField(string searchString)
         {
-            _webDriver.WaitForElement(GoogleSearchField, 5000);
+            _webDriver.IsElementDisplayed(GoogleSearchField, 3);
             _webDriver.InputFieldText(GoogleSearchField, searchString);
         }
 
         public void HitSearchOnGoogle()
         {
-            _webDriver.WaitForElement(GoogleEnterSearchButton, 5000);
             GoogleEnterSearchButton.Click();
         }
 
         public void HitPrimarySearchOnGoogle()
         {
-            _webDriver.WaitForElement(GooglePrimaryEnterSearchButton, 5000);
+            _webDriver.IsElementDisplayed(GooglePrimaryEnterSearchButton, 3);
             GooglePrimaryEnterSearchButton.Click();
         }
     }

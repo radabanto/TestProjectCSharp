@@ -84,6 +84,7 @@ namespace TestProjectMain.Hooks
             {
                 InitializeDriver();
             }
+            _webDriver.GetDriver().Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             _scenarioContext["driver"] = _webDriver;
             _objectContainer.RegisterInstanceAs<BrowserAction>(_webDriver);
         }
